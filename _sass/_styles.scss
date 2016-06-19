@@ -61,8 +61,22 @@ Does not work on round things. */
   text-align: center;
   padding: 30px 30px 5px;
   .staff-image {
-    width: 200px;
-    height: 200px;
+    width:200px;
+    height:200px;
+    img:last-child{display:none};
+    overflow: hidden;
+    background-color: #E6E6E6;
+    margin:0 auto 10px;
+    img {
+      @extend .img-scaled-wh;
+      background-color: white;
+    }   
+  }
+  .staff-image:hover {
+    width:200px;
+    height:200px;    
+    img:first-child{display:none};
+    img:last-child{display:inline-block};
     overflow: hidden;
     background-color: #E6E6E6;
     margin: 0 auto 10px;
@@ -70,7 +84,7 @@ Does not work on round things. */
       @extend .img-scaled-wh;
       background-color: white;
     }
-  }
+  } 
   .staff-description {
     width: 200px;
     p {
